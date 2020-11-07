@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "yarn build:client && yarn build:server",
+    "build": "concurrently 'netlify-lambda serve server/api' 'yarn build:client && yarn build:server'",
     "build:client": "next build",
     "build:server": "netlify-lambda build server/api",
     "postbuild": "next-on-netlify",
