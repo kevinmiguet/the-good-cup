@@ -5,9 +5,18 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "netlify-lambda": "2.0.1"
+  },
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "postbuild": "next-on-netlify"
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "next build",
+    "build:server": "netlify-lambda build server/api",
+    "postbuild": "next-on-netlify",
+    "start": "concurrently 'yarn start:client' 'yarn start:server'",
+    "start:client": "netlify dev",
+    "start:server": "netlify-lambda serve server/api"
   }
 }
