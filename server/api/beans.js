@@ -4,7 +4,7 @@ exports.handler = async (event, context) => {
     const params = getRequestParams(event)
     return getApiResponse({
         body: {
-            text: 'hello world',
+            text: 'hello good coupe is on the way!!',
             ...params
         }
     })
