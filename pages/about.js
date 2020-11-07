@@ -1,12 +1,13 @@
+import toto from "../server/api/beans"
+
 const About = ({ data }) => (
     <>About the good coupe {data.text}</>
 )
 
 export async function getStaticProps() {
-    // Fetch data from external API
-    const res = await fetch(`${process.env.API_URL}/beans`)
-    const data = await res.json()
-
+    const res = toto.handler()
+    const body = (await res).body
+    const data = JSON.parse(body)
     // Pass data to the page via props
     return { props: { data } }
 }

@@ -1,9 +1,11 @@
+const { getApiResponse } = require("../utils/requests");
+
 exports.handler = async (event, context) => {
-    return {
-        statusCode: 200,
-            headers: {
-                "content-type": "application/json"
-            },
-        body: JSON.stringify({text: "Hello, World"}),
-    };
+    return getApiResponse({
+        body: {
+            text: 'hello world'
+        }
+    })
+    
+
 };

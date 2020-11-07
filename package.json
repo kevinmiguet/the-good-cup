@@ -10,13 +10,12 @@
     "netlify-lambda": "2.0.1"
   },
   "scripts": {
-    "dev": "next",
-    "build": "concurrently 'netlify-lambda serve server/api' 'yarn build:client && yarn build:server'",
+    "build": "yarn build:client && yarn build:server",
     "build:client": "next build",
     "build:server": "netlify-lambda build server/api",
     "postbuild": "next-on-netlify",
-    "start": "concurrently 'yarn start:client' 'yarn start:server'",
-    "start:client": "netlify dev",
-    "start:server": "netlify-lambda serve server/api"
+    "dev": "concurrently 'yarn dev:client' 'yarn dev:server'",
+    "dev:client": "next",
+    "dev:server": "netlify-lambda serve server/api"
   }
 }
