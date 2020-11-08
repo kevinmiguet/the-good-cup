@@ -1,7 +1,7 @@
 import toto from "../server/api/beans"
 
 const About = ({ data }) => (
-    <>About the good coupe {data.text}</>
+    <h1>About the good coupe {data.text}</h1>
 )
 
 export async function getStaticProps() {
