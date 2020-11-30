@@ -1,3 +1,4 @@
+import Axios from "axios";
 
 export const getApiResponse = ({ statusCode = 200, body: _body = {} }) => {
     const isJSONBody = typeof _body === "object";
@@ -31,3 +32,15 @@ export const getRequestParams = (event) => {
 export const isPOSTRequest = (event) => event.httpMethod === "POST"
 export const isGETRequest = (event) => event.httpMethod === "GET"
 export const isPUTRequest = (event) => event.httpMethod === "PUT"
+
+export const StrapiAPI = Axios.create({
+  baseURL: `https://super-server-k.herokuapp.com`,
+  timeout: 10000,
+});
+
+
+export const statusCodes = {
+    "OK": 200,
+    "Bad Request": 400,
+    "Not found": 404
+}
