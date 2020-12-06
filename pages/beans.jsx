@@ -20,6 +20,7 @@ const Beans = () => {
         }
     })
     const [beans, setBeans] = useState([])
+
     return (
         <form {...{ onSubmit }}>
             <InputText name="country" defaultValue={defaultValues.country} onChange={onChange} />

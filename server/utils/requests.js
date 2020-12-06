@@ -39,6 +39,7 @@ export const StrapiAPI = Axios.create({
 });
 
 
+
 export const statusCodes = {
     "OK": 200,
     "Bad Request": 400,
