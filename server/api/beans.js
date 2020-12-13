@@ -8,7 +8,7 @@ import {
 } from '../utils/requests'
 
 
-const GETHandler = (event, context) => {
+const GETHandler = async (event, context) => {
     // how to get params
     // const params = getRequestParams(event);
     // params.country 
@@ -33,8 +33,14 @@ const GETHandler = (event, context) => {
 
 const POSTHandler = (event, context) => {
         // how to get params
+        console.log("coucou")
     const params = getRequestParams(event);
-    
+    return getApiResponse({
+        statusCode: statusCodes.OK,
+        body: {
+            coffee: 'oui'
+        }
+    })
 
     // https://strapi.io/documentation/3.0.0-beta.x/content-api/parameters.html#filters
     // params.country 
