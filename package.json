@@ -19,5 +19,16 @@
     "dev": "concurrently 'npm run dev:client' 'npm run dev:server'",
     "dev:client": "next",
     "dev:server": "netlify-lambda serve server/api"
-  }
+  },
+  "name": "the-good-cup",
+  "description": "* A terminal with linux \r     * if you're on windows this will help: https://www.windowscentral.com/heres-why-you-might-be-blocked-getting-windows-10-october-2020-update\r * Yarn",
+  "version": "1.0.0",
+  "main": "next.config.js",
+  "repository": "git+https://github.com/kevinmiguet/the-good-cup.git",
+  "author": "WHO <40888861+alphaWHO@users.noreply.github.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinmiguet/the-good-cup/issues"
+  },
+  "homepage": "https://github.com/kevinmiguet/the-good-cup#readme"
 }

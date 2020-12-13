@@ -11,6 +11,11 @@
 * then run `yarn dev`
 * then you can open http://localhost:3000
 
+OR if you are on windows gitbash
+
+* npx concurrently 'npm run dev:client' 'npm run dev:server'
+
+
 ### How to deploy 
 * just push to `main`
 * if deployment works you'll see it on https://nostalgic-goldstine-6c236a.netlify.app/
