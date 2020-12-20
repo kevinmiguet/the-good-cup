@@ -16,7 +16,7 @@ const Beans = () => {
             if (res.status == 200) setBeans(res.data.beans)
         },
         defaultValues: {
-            country: "Brasil"
+            country: "Ghana"
         }
     })
     const [beans, setBeans] = useState([])
