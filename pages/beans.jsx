@@ -24,9 +24,17 @@ const Beans = () => {
     return (
         <form {...{ onSubmit }}>
             <InputText name="country" defaultValue={defaultValues.country} onChange={onChange} />
-            <Button value="send"/>
+            <Button value="search by country"/>
             {beans.map(bean => (<>
                 <div>{bean.country}</div>
+                <div>{JSON.stringify(bean, null, 4)}</div>
+            </>   
+            ))}
+
+            <InputText name="method" defaultValue={defaultValues.method} onChange={onChange} />
+            <Button value="search by method"/>
+            {beans.map(bean => (<>
+                <div>{bean.method}</div>
                 <div>{JSON.stringify(bean, null, 4)}</div>
             </>
                 
