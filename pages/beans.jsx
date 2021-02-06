@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Button } from "../components/forms/button"
 import { API } from "../components/helpers/api"
 import { useForm } from "../components/hooks/useForm"
+import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
 
 
@@ -28,18 +29,13 @@ const Beans = () => {
             <Button value="search by country"/>
             {beans.map(bean => (<>
                 <div>{bean.country}</div>
-                <div>{JSON.stringify(bean, null, 4)}</div>
+                <div>{}</div>
             </>   
             ))}
 
             <InputText name="method" defaultValue={defaultValues.method} onChange={onChange} />
             <Button value="search by method"/>
-            {beans.map(bean => (<>
-                <div>{bean.method}</div>
-                <div>{JSON.stringify(bean, null, 4)}</div>
-            </>
-                
-            ))}
+            {beans.map(bean => (<BeanInfoCard bean={bean}/>))}
         </form>
     )
 }
