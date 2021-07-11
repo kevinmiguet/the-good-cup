@@ -24,7 +24,7 @@ const Beans = () => {
     const [beans, setBeans] = useState([])
 
     return (
-        <form {...{ onSubmit }}>
+        <form {...{ onSubmit }}> 
             <InputText name="country" defaultValue={defaultValues.country} onChange={onChange} />
             <Button value="search by country"/>
             {beans.map(bean => (<>
@@ -33,7 +33,7 @@ const Beans = () => {
             </>   
             ))}
 
-            <InputText name="method" defaultValue={defaultValues.method} onChange={onChange} />
+            <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
             {beans.map(bean => (<BeanInfoCard bean={bean}/>))}
         </form>
