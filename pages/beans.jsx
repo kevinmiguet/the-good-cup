@@ -24,19 +24,24 @@ const Beans = () => {
     const [beans, setBeans] = useState([])
 
     return (
+        <div>
+        <h1>Ready to indulge your taste buds?</h1>
         <form {...{ onSubmit }}> 
-            <InputText name="country" defaultValue={defaultValues.country} onChange={onChange} />
-            <Button value="search by country"/>
-            {beans.map(bean => (<>
-                <div>{bean.country}</div>
-                <div>{}</div>
-            </>   
-            ))}
-
-            <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
+            <InputText label="Country" name="country" placeholder="Enter a country" defaultValue={defaultValues.country} onChange={onChange} />
+            <Button value="Go"/>
+            {/* {beans.map(bean => (<>
+                 <div>{bean.country}</div>
+                </>   
+            ))} */}
+            <>{beans.map(bean => (
+            <BeanInfoCard bean={bean}/>))}
+            </>    
+            {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
-            {beans.map(bean => (<BeanInfoCard bean={bean}/>))}
+            {beans.map(bean => (<BeanInfoCard bean={bean}/>))} */}
         </form>
+        </div>
+        
     )
 }
 
