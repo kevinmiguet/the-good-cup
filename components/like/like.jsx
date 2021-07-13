@@ -8,12 +8,11 @@ const Like = ()=> {
         setlikeCount(likeCount+1);
     };
     const handleDecrement =()=>{
-        setdislikeCount(dislikeCount-1);
+        setdislikeCount(dislikeCount+1);
     };
 
     return (
         <div>
-            <h3>Like this coffee</h3>
         <button onClick={handleIncrement}>Like {likeCount}</button>
         <button onClick={handleDecrement}>Disike {dislikeCount}</button>
         </div>
