@@ -27,15 +27,17 @@ const Beans = () => {
     return (
         <div>
         <div>   
-        <h1>Ready to indulge your taste buds?</h1>
+        <h1>Embark your taste buds on the next coffee tour?</h1>
         </div> 
+
         <form {...{ onSubmit }}> 
-            <InputText label="Country" name="country" defaultValue={defaultValues.country} onChange={onChange} />
+            <InputText label="Destination:" name="country" defaultValue={defaultValues.country} onChange={onChange} />
             <Button value="Go"/>
             {/* {beans.map(bean => (<>
                  <div>{bean.country}</div>
                 </>   
             ))} */}
+            <br></br>
             <>
             {beans.map(bean => (
             <BeanInfoCard bean={bean}/>))}
