@@ -26,7 +26,9 @@ const Beans = () => {
 
     return (
         <div>
+        <div>   
         <h1>Ready to indulge your taste buds?</h1>
+        </div> 
         <form {...{ onSubmit }}> 
             <InputText label="Country" name="country" defaultValue={defaultValues.country} onChange={onChange} />
             <Button value="Go"/>
@@ -37,7 +39,7 @@ const Beans = () => {
             <>
             {beans.map(bean => (
             <BeanInfoCard bean={bean}/>))}
-            <Like/>
+            
             </>    
             {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
