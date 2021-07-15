@@ -4,7 +4,6 @@ import { API } from "../components/helpers/api"
 import { useForm } from "../components/hooks/useForm"
 import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
-import Like from "../components/like/like"
 
 
 const Beans = () => {
