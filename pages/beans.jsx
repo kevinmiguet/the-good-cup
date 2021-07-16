@@ -4,7 +4,7 @@ import { API } from "../components/helpers/api"
 import { useForm } from "../components/hooks/useForm"
 import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
-
+import Navbar from "../components/navbar";
 
 const Beans = () => {
     const {
@@ -25,6 +25,7 @@ const Beans = () => {
 
     return (
         <div>
+            <Navbar/>
         <div>   
         <h1>Embark your taste buds on the next coffee tour?</h1>
         </div> 
