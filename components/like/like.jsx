@@ -14,7 +14,7 @@ const Like = ()=> {
     return (
         <div>
         <button onClick={handleIncrement}>Like {likeCount}</button>
-        <button onClick={handleDecrement}>Disike {dislikeCount}</button>
+        <button onClick={handleDecrement}>Dislike {dislikeCount}</button>
         </div>
     );
 };
