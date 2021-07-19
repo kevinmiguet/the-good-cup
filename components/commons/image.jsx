@@ -1,1 +1,1 @@
-export const Image = ({src}) => <img src={`http://super-server-k.herokuapp.com${src}`}/>
+export const Image = ({src, className}) => <img className={className} src={`http://super-server-k.herokuapp.com${src}`}/>
