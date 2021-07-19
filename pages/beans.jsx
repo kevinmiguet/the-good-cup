@@ -13,7 +13,7 @@ const Beans = () => {
         onSubmit,
     } = useForm({
         onSubmit: async (values) => {
-            const res = await API.get('/beans')
+            const res = await API.get('/beans?country='+values.country)
             if (res.status == 200) setBeans(res.data.beans)
         },
         defaultValues: {
@@ -38,11 +38,11 @@ const Beans = () => {
                 </>   
             ))} */}
             <br></br>
-            <>
+            <div className="flex flex-row flex-wrap">
             {beans.map(bean => (
             <BeanInfoCard bean={bean}/>))}
             
-            </>    
+            </div>    
             {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
             {beans.map(bean => (<BeanInfoCard bean={bean}/>))} */}
