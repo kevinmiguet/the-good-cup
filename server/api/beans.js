@@ -10,15 +10,17 @@ import {
 
 const GETHandler = async (event, context) => {
     // how to get params
-    // const params = getRequestParams(event);
-    // params.country 
+   //const params = getRequestParams(event);
+    //params.country
     
     let strapiApiRoute = '/beans'
     
     // if someone called /beans?beanId=44 (and wanted only one)
     const beanId = event.queryStringParameters.beanId
     if (beanId) strapiApiRoute = `/beans/${beanId}`
-    
+    const beanCountry = event.queryStringParameters.country.toLowerCase()
+    if (beanCountry) strapiApiRoute = `/beans?country_contains=${beanCountry}`
+
     // Get beans or bean
     const {
         data: beans
