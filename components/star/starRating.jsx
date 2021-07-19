@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import Star from "./star"
-
-const StarRating = ({ totalStars }) => {
-    const [starsSelected, selectStar] = useState(0);
+const totalStars = 5;
+const StarRating = () => {
+    const [starsSelected, selectStar] = useState(1);
     return (
       <div className="star-rating">
         {[...Array(totalStars)].map((n, i) => (
