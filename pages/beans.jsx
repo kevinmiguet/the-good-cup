@@ -5,6 +5,7 @@ import { useForm } from "../components/hooks/useForm"
 import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
 import Navbar from "../components/navbar";
+import { BeanInfoCardbis } from "../components/beans/bean-info-cardbis"
 
 const Beans = () => {
     const {
@@ -17,7 +18,7 @@ const Beans = () => {
             if (res.status == 200) setBeans(res.data.beans)
         },
         defaultValues: {
-            country: "Ghana",
+            country: "Taiwan",
             Drying_method: "washed"
         }
     })
@@ -41,6 +42,11 @@ const Beans = () => {
             <div className="flex flex-row flex-wrap">
             {beans.map(bean => (
             <BeanInfoCard bean={bean}/>))}
+            
+            </div>    
+            <div className="flex flex-row flex-wrap">
+            {beans.map(bean => (
+            <BeanInfoCardbis bean={bean}/>))}
             
             </div>    
             {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
