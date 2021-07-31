@@ -5,7 +5,8 @@ import { useForm } from "../components/hooks/useForm"
 import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
 import Navbar from "../components/navbar";
-import { BeanInfoCardbis } from "../components/beans/bean-info-cardbis"
+
+
 
 const Beans = () => {
     const {
@@ -27,10 +28,9 @@ const Beans = () => {
     return (
         <div>
             <Navbar/>
-        <div>   
+        
+        <div className='block bg-green-50 text-center'>   
         <h1>Embark your taste buds on the next coffee tour?</h1>
-        </div> 
-
         <form {...{ onSubmit }}> 
             <InputText label="Destination:" name="country" defaultValue={defaultValues.country} onChange={onChange} />
             <Button value="Go"/>
@@ -38,22 +38,18 @@ const Beans = () => {
                  <div>{bean.country}</div>
                 </>   
             ))} */}
-            <br></br>
-            <div className="flex flex-row flex-wrap">
+           </form>
+</div>
+            <div className="flex flex-row justify-center flex-wrap bg-red-50">
             {beans.map(bean => (
             <BeanInfoCard bean={bean}/>))}
-            
             </div>    
-            <div className="flex flex-row flex-wrap">
-            {beans.map(bean => (
-            <BeanInfoCardbis bean={bean}/>))}
             
-            </div>    
+                                    
             {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
             {beans.map(bean => (<BeanInfoCard bean={bean}/>))} */}
-        </form>
-        </div>
+               </div>
         
     )
 }
