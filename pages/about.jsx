@@ -5,9 +5,9 @@ import Navbar from "../components/navbar";
 
 const About = ({ data }) => (
     <>
-    <title>Worldwide community for coffee lovers!</title>
+    <title className="box-border text-green-400 align-middle">Worldwide community for coffee lovers!</title>
     <Navbar/>
-    <div className="bg-coffee-pattern bg-contain">
+    <div className="bg-coffee-pattern bg-contain bg-no-repeat bg-right-bottom">
     <header>A worldwide community for coffee lovers!</header>
     <h1>Having fun tantalising your taste buds with ze good coupe {data.text}</h1>
     <span role="img" aria-label="cup of coffee">&#9749; 	</span> 
