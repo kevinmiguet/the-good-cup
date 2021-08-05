@@ -5,7 +5,7 @@ import { useForm } from "../components/hooks/useForm"
 import {BeanInfoCard} from "../components/beans/bean-info-card"
 const { InputText } = require("../components/forms/input-text")
 import Navbar from "../components/navbar";
-
+import Emojipicker from "../components/commons/emojipicker"
 
 
 const Beans = () => {
@@ -33,7 +33,8 @@ const Beans = () => {
         <h1>Embark your taste buds on the next coffee tour?</h1>
         <form {...{ onSubmit }}> 
             <InputText label="Destination:" name="country" defaultValue={defaultValues.country} onChange={onChange} />
-            <Button value="Go"/>
+            <Button className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded" 
+                    value="Go"/>
             {/* {beans.map(bean => (<>
                  <div>{bean.country}</div>
                 </>   
@@ -45,7 +46,7 @@ const Beans = () => {
             <BeanInfoCard bean={bean}/>))}
             </div>    
             
-                                    
+            <Emojipicker/>         
             {/* <InputText name="method" defaultValue={defaultValues.Drying_method} onChange={onChange} />
             <Button value="search by method"/>
             {beans.map(bean => (<BeanInfoCard bean={bean}/>))} */}
